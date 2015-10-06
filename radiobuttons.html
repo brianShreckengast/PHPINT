@@ -1,0 +1,41 @@
+<html>
+<script type="text/javascript" language="javascript">
+
+function myClickFunction() {
+
+	var person_name = document.getElementById('name').value;
+	var radios = document.getElementsByName('yesOrNO');
+	var choice = null;
+	for (var i = 0; i < radios.length; i++) {
+
+		piece = radios[i];
+
+		if (piece.checked) {
+
+
+			choice = piece.value;
+			
+			break;
+		}
+	}
+
+
+console.log (choice+" we can hang out, "+person_name);
+
+}
+
+</script>
+<body>
+
+
+
+<p><input type="radio" name="yesOrNo" value="Yes"/> Yes</p>
+<p><input type="radio" name="yesOrNo" value="No"/> No</p>
+<p><input type="radio" name="yesOrNo" value="Maybe so"/> Maybe so</p>
+
+<p>Name: <input type ="text" id ="name" name ="name" value ="Enter Your Name"></p>
+
+<input type="button" value="Click Me" onclick="myClickFunction();" class="inputbox"/>
+
+</body>
+</html>
